@@ -1,5 +1,3 @@
-Advanced Data Structures
-========================
+Advanced Algorithm Design
+=========================
 
-1. **Temporal Data Structures**
-2.
