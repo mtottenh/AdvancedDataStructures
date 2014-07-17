@@ -2,7 +2,7 @@ Algorithm and DataStrucutre Practice
 ====================================
 This repo contains the course notes and some supporting code in C++ for the following MIT Courses:
 * Structure and Interpretation of Computer Programs [(6.001)](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/)
-* Introduction To Algorithms [(6.006)](http://courses.csail.mit.edu/6.006/fall11/notes.shtml)
+* [Introduction To Algorithms](./doc/6_006/CourseOverview.md) [(6.006)](http://courses.csail.mit.edu/6.006/fall11/notes.shtml)
 * Algorithm Design [(6.046)](http://stellar.mit.edu/S/course/6/sp14/6.046/index.html)
 * Avanced Algorithm Design [(6.854)](http://courses.csail.mit.edu/6.854/current/)
 * Advanced Data Structures [(6.851)](https://courses.csail.mit.edu/6.851/spring14/)
