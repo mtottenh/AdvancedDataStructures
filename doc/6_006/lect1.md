@@ -42,11 +42,13 @@ value[n] >= value[n+1]
 
 **Complexity Analysis of the Recursive Algorithm**
 
-Worst Case:
-* recursive case: T(n) = O(1) + T(n/2)
-* base case :     T(1) = O(1)
+Recurrence relation:
 
-T(n) = O(1) + ... + O(n) = O(lg(n))
+           recursive case: T(n) = O(1) + T(n/2)
+          
+           base case :     T(1) = O(1)
+
+                        => T(n) = O(1) + ... + O(n) = O(lg(n))
 
 
 
@@ -102,11 +104,11 @@ first, down first.
 
 Recurence relation: 
 
-                    T(n,m) = T(n,m/2) + O(n)  *(O(n) for maximum)*
+                    recursive case:     T(n,m) = T(n,m/2) + O(n)
 
-                    T(n,1) = O(n)
+                    base case:          T(n,1) = O(n)
 
-                 => T(n,m) = O(n) + .. + O(n) = O(n lg(m))
+                                     => T(n,m) = O(n) + .. + O(n) = O(n lg(m))
 
 
 
