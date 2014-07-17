@@ -8,12 +8,14 @@ Toy problem we will use to discuss issues around designing efficeint algorithms.
 |:----- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | value | a | b | c | d | e | f | g | h | i |
 
-**a->i** are numbers, find a *peak* where a peak passes:
-test(n) : position n is a peak if and only if, value[n]  >= value[n-1] and 
-value[n] >= value[n+1]
+**a->i** are numbers, find a *peak* where a peak passes the following test:
 
 ```
-The edges only have to look to one side
+test(n) : position n is a peak if and only if, 
+value[n]  >= value[n-1] and 
+value[n] >= value[n+1]
+
+*The edges only have to look to one side
 ```
 
 Problem
@@ -26,5 +28,6 @@ Straight forward algorithm:
 * Linear scan of the list, starting from index 1 all the way to index 9.
   * For each element perform the test.
   * Stop the first time an element passes the test
+
 Runtime is O(n).
 
