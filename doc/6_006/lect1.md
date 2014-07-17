@@ -2,9 +2,9 @@ Peak Finding Problem [>](./lect2.md)
 ====================
 Toy problem we will use to discuss issues around designing efficeint algorithms. 
 
-*Find **a** peak if it exists* 
+*Find __a__ peak if it exists* 
 
-Code implementing the algorithms can be found [here](../../src/algorithms/peak_finding/peak.cpp)
+Code implementing the algorithms can be found [**HERE**](../../src/algorithms/peak_finding/peak.cpp)
 
 
 1D Version
@@ -14,7 +14,7 @@ Code implementing the algorithms can be found [here](../../src/algorithms/peak_f
 |:----- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | value | a | b | c | d | e | f | g | h | i |
 
-**a->i** are numbers, find a *peak* where a peak passes the following test:
+where **a** through **i** are numbers, a peak passes the following test:
 
 ```
 test(n) : position n is a peak if and only if, 
@@ -90,7 +90,7 @@ first, down first.
 
 * Pick middle column (j = m/2)
 * Find global maximum on column j (i,j)
-* Compare (i,j-1), (i,j), (i,J+1)
+* Compare (i,j-1), (i,j), (i,j+1)
   * Pick left cols if (i,j-1) > (i,j)
     * Solve the prolbem with 1/2 the number of cols
   * else Pick right cols if (i,j+1) > (i,j)
@@ -100,11 +100,12 @@ first, down first.
 
 Complexity Analysis of Recursive Version
 ----------------------------------------
-Recurence relation: T(n,m) = T(n,m/2) + O(n)  *(O(n) for maximum)*
+Recurence relation: 
+                    T(n,m) = T(n,m/2) + O(n)  *(O(n) for maximum)*
 
                     T(n,1) = O(n)
 
-                    => T(n,m) = O(n) + .. + O(n) = O(n lg(m))
+                 => T(n,m) = O(n) + .. + O(n) = O(n lg(m))
 
 
 
