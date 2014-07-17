@@ -7,8 +7,10 @@ This repo contains the course notes and some supporting code in C++ for the foll
 * Avanced Algorithm Design [(6.854)](http://courses.csail.mit.edu/6.854/current/)
 * Advanced Data Structures [(6.851)](https://courses.csail.mit.edu/6.851/spring14/)
 
-```Note: An effort will be made to keep this repo up to date as possible, but for the 
-**real** MIT experence, I suggest you attend yourself ;)```
+```
+Note: An effort will be made to keep this repo up to date as possible, but for the 
+**real** MIT experence, I suggest you attend yourself ;)
+```
 
 Introduction to Algorithms and Algorithm Design
 -----------------------------------------------
@@ -47,14 +49,16 @@ From what I can gather, **6.006** and **6.046** are *similar*.
   * Computaitonal Complexity
   * Research Topics
 
-Whereas **6.046** **TO EDIT** - This doesn't have videos either
-1. inerval scheduling
-2. dividge and conquore
-3. FFTs
-4. Randomized Algorithms
-6. Universal Hashing 
-7. Amortized Alogihtms
-8. Dynamic 
+Whereas **6.046** doesn't have video lectures, but notes from **2011** covering:
+
+1. **Intro & Interval scheduling**
+2. **Divide and conquore**
+3. **FFTs**
+4. **Randomized Algorithms**
+6. **Universal Hashing**
+7. **Amortized Alogihtms**
+8. **Dynamic Programming**
+
 
 
 
