@@ -1,5 +1,5 @@
-Peak Finding Problem [>](./lect2.md)
-====================
+1 Peak Finding Problem [>](./lect2.md)
+======================================
 Toy problem we will use to discuss issues around designing efficeint algorithms. 
 
 *Find __a__ peak if it exists* 

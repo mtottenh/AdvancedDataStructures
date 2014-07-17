@@ -5,6 +5,7 @@ From what I can gather, **6.006** and **6.046** are *similar*.
 **6.006** has video lectures from **2011** posted online covering the following topics:
 
 1. [**Peak Finding Problem**](./lect1.md)
+  * [Models of computation](./lect1_5.md)
 2. [**Sorting**](./lect2.md)
   * Insertion sort, Merge Sort
   * Heaps and Heap sort
