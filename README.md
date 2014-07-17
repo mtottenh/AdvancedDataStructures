@@ -15,6 +15,7 @@ Note: An effort will be made to keep this repo up to date as possible, but for t
 Introduction to Algorithms and Algorithm Design
 -----------------------------------------------
 From what I can gather, **6.006** and **6.046** are *similar*.
+
 **6.006** has video lectures from **2011** posted online covering the following topics:
 
 1. **Intro & Model of computation**
