@@ -2,7 +2,7 @@ Peak Finding Problem
 ====================
 Toy Problem to design an efficeint algorithm. 1D: Array of numbers  
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 
-| - | - | - | - | - | - | - | - | - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | a | b | c | d | e | f | g | h | i |
 
 a=>i are numbers, find a *peak* where a peak is defined as:
