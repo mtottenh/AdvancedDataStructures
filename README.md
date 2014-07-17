@@ -7,48 +7,14 @@ This repo contains the course notes and some supporting code in C++ for the foll
 * Avanced Algorithm Design [(6.854)](http://courses.csail.mit.edu/6.854/current/)
 * Advanced Data Structures [(6.851)](https://courses.csail.mit.edu/6.851/spring14/)
 
+Click the course title to take you to an overview of the course, and the course code
+to take you to the official MIT page for the course from that year. (Mostly 2011/2014).
+
+
 ```
 Note: An effort will be made to keep this repo up to date as possible, but for the 
 **real** MIT experence, I suggest you attend yourself ;)
 ```
-
-Introduction to Algorithms and Algorithm Design
------------------------------------------------
-From what I can gather, **6.006** and **6.046** are *similar*.
-
-**6.006** has video lectures from **2011** posted online covering the following topics:
-
-1. **Intro & Model of computation**
-2. **Sorting**
-  * Insertion sort, Merge Sort
-  * Heaps and Heap sort
-  * BSTs and BST sort
-  * AVL Trees and AVL sort
-  * Counting/Radix sort & Lower bounds for sorting
-3. **Hashing**
-  * Hashing & Chaining
-  * Simulation Algoritms
-  * Table Doubling 
-  * Open Addressing, Cryptographic Hashing
-4. **Numerics**
-  * Karatsuba Multiplication & Integer Arithmetic
-  * Netwons Method/Square Roots
-5. **Graphs**
-  * BFS
-  * DFS
-  * Topological Sorting
-6. **Shortest Paths**
-  * Single Source Problem
-  * Dijkstra & Optimizations
-  * Bellman-Ford
-7. **Dynamic Programming**
-  * Memoization
-  * Parent Pointers
-  * String Subproblems
-  * *Guessing* Problems
-8. **Advanced Topics**
-  * Computaitonal Complexity
-  * Research Topics
 
 Whereas **6.046** doesn't have video lectures, but notes from **2011** covering:
 
