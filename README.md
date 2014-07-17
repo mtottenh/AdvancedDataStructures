@@ -10,6 +10,7 @@ This repo contains the course notes and some supporting code in C++ for the foll
 Click the course title to take you to an overview of the course, and the course code
 to take you to the official MIT page for the course from that year. (Mostly 2011/2014).
 
+These courses are *meant* to be studied in the above order, i.e.  **6.001** --> **6.006** --> **6.046** --> **6.851** --> **6.854**
 
 ```
 Note: An effort will be made to keep this repo up to date as possible, but for the 
