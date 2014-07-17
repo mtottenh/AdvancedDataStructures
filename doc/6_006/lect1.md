@@ -1,8 +1,14 @@
-Peak Finding Problem
+Peak Finding Problem [>](./lect2.md)
 ====================
 Toy problem we will use to discuss issues around designing efficeint algorithms. 
 
-1D: Array of numbers 
+*Find **a** peak if it exists* 
+
+Code implementing the algorithms can be found [here](../../src/algorithms/peak_finding/peak.cpp)
+
+
+1D Version
+----------
 
 | index | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 |:----- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -18,18 +24,14 @@ value[n] >= value[n+1]
 *The edges only have to look to one side
 ```
 
-Problem
--------
-*Find **a** peak if it exists* 
+**Straight forward algorithm (*O(n)*)**
 
-Code implementing the algorithms can be found [here](../../src/algorithms/peak_finding/peak.cpp)
-
-Straight forward algorithm (**O(n)**):
 * Linear scan of the list, starting from index 1 all the way to index 9.
   * For each element perform the test.
   * Stop the first time an element passes the test
 
-Recursive Algorithm (**O(lg(n))**) :
+**Recursive Algorithm (*O(lg(n))*)**
+
 * if value[n/2] < value[n/2 -1]
   * then only look at the left half ( 1 .. n/2 -1) to look for a peak
 * else if value[n/2] < value[n/2 +1] 
@@ -39,9 +41,8 @@ Recursive Algorithm (**O(lg(n))**) :
 [*Argue that this algorithm is correct*](./prob_set1.pdf)
 
 Complexity Analysis of the Recursive Algorithm
-==============================================
+----------------------------------------------
 Worst Case:
-
 * recursive case: T(n) = O(1) + T(n/2)
 * base case :     T(1) = O(1)
 
@@ -50,8 +51,7 @@ T(n) = O(1) + ... + O(n) = O(lg(n))
 
 
 2D Version
-==========
-
+----------
 Grid with n rows and m columns.
 
 | index | 1 | 2 | 3 | 4 |
@@ -64,7 +64,6 @@ Grid with n rows and m columns.
 A peak here is defined intuitively like a hill:
  * a is a 2d peak iff a >= b, a >=d, a >= c, a >=e
 
-Greedy Ascent Algorithm (O(nm)): 
 Using The example array...
 
 | index |  1 |  2 |  3 |  4 |
@@ -73,6 +72,9 @@ Using The example array...
 | 2     | 14 | 13 | 12 |    |
 | 3     | 15 | 9  | 11 | 17 |
 | 4     | 16 | 17 | 19 | 20 |
+
+
+**Greedy Ascent Algorithm (*O(nm)*)** 
 
 Roughly:
 * Pick an arbitrary start point
@@ -84,8 +86,8 @@ Roughly:
 You will need to choose default traversal directions & starting points, e.g. left
 first, down first.
 
-Recursive Version (O()):
-  
+**Recursive Version (*O(n lg(m))*)**  
+
 * Pick middle column (j = m/2)
 * Find global maximum on column j (i,j)
 * Compare (i,j-1), (i,j), (i,J+1)
@@ -94,10 +96,14 @@ Recursive Version (O()):
   * else Pick right cols if (i,j+1) > (i,j)
     * Solve the problem with 1/2 the number of cols
   * else (i,j) is a 2D peak.
-* When you have a singlecolumn find the global maximum and you are done.
+* When you have a single column find the global maximum and you are done.
 
-Recurence relation: T(n,m) = T(n,m/2) + O(n)  (O(n) for maximum)
+Complexity Analysis of Recursive Version
+----------------------------------------
+Recurence relation: T(n,m) = T(n,m/2) + O(n)  *(O(n) for maximum)*
+
                     T(n,1) = O(n)
+
                     => T(n,m) = O(n) + .. + O(n) = O(n lg(m))
 
 
