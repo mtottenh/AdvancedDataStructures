@@ -3,6 +3,8 @@
 #include <vector>
 #include <utility>
 #include <cstdlib>
+#include <iostream>
+
 bool boundary(int a, size_t b);
 int neighbour(int a, size_t b);
 std::pair<bool,int> find_peak(std::vector<int> lst);

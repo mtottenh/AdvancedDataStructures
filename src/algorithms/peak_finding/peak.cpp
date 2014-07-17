@@ -16,7 +16,13 @@ int neighbour (int a, size_t b) {
 std::pair<bool,int> find_peak(std::vector<int> lst) {
   bool peak = false;
   int index = -1;
-  while( !peak && index < lst.size()) {
+  int size = lst.size();
+  std::cout << "find_peak()\n";
+  std::cout << "\t peak: " << (peak ? "true" : "false") << "\n";
+  std::cout << "\t index: " << index << "\n";
+  std::cout << "\t list.size(): " << size << "\n";
+
+  while( !peak && (index < size) ) {
     index++;
     if (!boundary(index,lst.size())) {
       /* General Case */
