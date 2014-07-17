@@ -1,12 +1,14 @@
 Peak Finding Problem
 ====================
-Toy Problem to design an efficeint algorithm. 1D: Array of numbers 
+Toy problem we will use to discuss issues around designing efficeint algorithms. 
 
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| a | b | c | d | e | f | g | h | i |
+1D: Array of numbers 
 
-a=>i are numbers, find a *peak* where a peak is defined as:
+| index | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|:----- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| value | a | b | c | d | e | f | g | h | i |
+
+**a->i** are numbers, find a *peak* where a peak is defined as:
 Position 2 is a peak if and only if, b >= a and b >= c
 
 ```
