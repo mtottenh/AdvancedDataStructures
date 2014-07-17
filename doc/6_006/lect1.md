@@ -86,5 +86,20 @@ first, down first.
 
 Recursive Version (O()):
   
+* Pick middle column (j = m/2)
+* Find global maximum on column j (i,j)
+* Compare (i,j-1), (i,j), (i,J+1)
+  * Pick left cols if (i,j-1) > (i,j)
+    * Solve the prolbem with 1/2 the number of cols
+  * else Pick right cols if (i,j+1) > (i,j)
+    * Solve the problem with 1/2 the number of cols
+  * else (i,j) is a 2D peak.
+* When you have a singlecolumn find the global maximum and you are done.
+
+Recurence relation: T(n,m) = T(n,m/2) + O(n)  (O(n) for maximum)
+                    T(n,1) = O(n)
+                    => T(n,m) = O(n) + .. + O(n) = O(n lg(m))
+
+
 
 
