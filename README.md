@@ -17,5 +17,5 @@ Note: An effort will be made to keep this repo up to date as possible, but for t
 **real** MIT experence, I suggest you attend yourself ;)
 ```
 
-** No Video Lectures available for this course
-* partial video lectures available
+**No Video Lectures available for this course
+*partial video lectures available
