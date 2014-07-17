@@ -40,8 +40,8 @@ value[n] >= value[n+1]
 
 [*Argue that this algorithm is correct*](./prob_set1.pdf)
 
-Complexity Analysis of the Recursive Algorithm
-----------------------------------------------
+**Complexity Analysis of the Recursive Algorithm**
+
 Worst Case:
 * recursive case: T(n) = O(1) + T(n/2)
 * base case :     T(1) = O(1)
@@ -98,9 +98,10 @@ first, down first.
   * else (i,j) is a 2D peak.
 * When you have a single column find the global maximum and you are done.
 
-Complexity Analysis of Recursive Version
-----------------------------------------
+**Complexity Analysis of Recursive Version**
+
 Recurence relation: 
+
                     T(n,m) = T(n,m/2) + O(n)  *(O(n) for maximum)*
 
                     T(n,1) = O(n)
