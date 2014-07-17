@@ -7,36 +7,47 @@ This repo contains the course notes and some supporting code in C++ for the foll
 * Avanced Algorithm Design [(6.854)](http://courses.csail.mit.edu/6.854/current/)
 * Advanced Data Structures [(6.851)](https://courses.csail.mit.edu/6.851/spring14/)
 
-Note: An effort will be made to keep this repo up to date as possible, but for the 
-**real** MIT experence, I suggest you attend yourself ;)
+```Note: An effort will be made to keep this repo up to date as possible, but for the 
+**real** MIT experence, I suggest you attend yourself ;)```
 
 Introduction to Algorithms and Algorithm Design
 -----------------------------------------------
-From what I can gather, 6.006 and 6.046 are similar.
-**6.006** has lectures from **2011** posted online covering the following topics:
+From what I can gather, **6.006** and **6.046** are *similar*.
+**6.006** has video lectures from **2011** posted online covering the following topics:
 
-1. **Intro & Model of computation **
-2. Sorting
+1. **Intro & Model of computation**
+2. **Sorting**
   * Insertion sort, Merge Sort
   * Heaps and Heap sort
   * BSTs and BST sort
   * AVL Trees and AVL sort
   * Counting/Radix sort & Lower bounds for sorting
-3. Hashing
+3. **Hashing**
   * Hashing & Chaining
   * Simulation Algoritms
   * Table Doubling 
   * Open Addressing, Cryptographic Hashing
-4. Numerics
-5. Graphs
+4. **Numerics**
+  * Karatsuba Multiplication & Integer Arithmetic
+  * Netwons Method/Square Roots
+5. **Graphs**
   * BFS
   * DFS
   * Topological Sorting
-6. Shortest Paths
-7. Dynamic Programming
-8. Advanced Topics
+6. **Shortest Paths**
+  * Single Source Problem
+  * Dijkstra & Optimizations
+  * Bellman-Ford
+7. **Dynamic Programming**
+  * Memoization
+  * Parent Pointers
+  * String Subproblems
+  * *Guessing* Problems
+8. **Advanced Topics**
+  * Computaitonal Complexity
+  * Research Topics
 
-Whereas 6.046 ** TO EDIT ** - This doesn't have videos either
+Whereas **6.046** **TO EDIT** - This doesn't have videos either
 1. inerval scheduling
 2. dividge and conquore
 3. FFTs
