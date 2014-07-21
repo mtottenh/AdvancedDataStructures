@@ -1,9 +1,12 @@
 #ifndef __HEAP__H__
 #define __HEAP__H__
+#include <vector>
+#include <cstdlib>
 
 /* Heap implmented over a vector
  * TODO: template this class to make it more generic
  */
+void heap_sort(std::vector<int> &vec);
 
 class Heap {
   private:
@@ -28,8 +31,8 @@ class Heap {
     void build_heap();
     void insert(int elem);
     int extract();
-    void delete(size_t node);
-}
+    //void delete(size_t node);
+};
 
 
 #endif
