@@ -1,7 +1,10 @@
 #include <iostream>
 #include <tuple>
 #include <peak_finding/peak.hpp>
+#include <sorting/sorting.hpp>
+
 int main() {
+  /* 1D Peak Finding */
   std::vector<int> a;
   bool found = false;
   int peak_index = -1;
@@ -17,5 +20,25 @@ int main() {
   else
     std::cout << "No peak found in data\n";
 
+  /* Some sorting */
+  a.push_back(7);
+  a.push_back(3);
+  a.push_back(5);
+  a.push_back(2);
+
+  std::cout << "Sorting array a[]: {";
+  for (size_t i = 0; i < a.size(); i++) {
+    std::cout << a[i];
+    if (i < a.size() - 1)
+      std::cout << ", ";
+  }
+  std::cout << "}\nAfter insertion sort a[]: {";
+  insertion_sort<int>(a);
+  for (size_t i = 0; i < a.size(); i++) {
+    std::cout << a[i];
+    if (i < a.size() - 1)
+      std::cout << ", ";
+  }
+  std::cout << "}\n";
   return 0;
 }

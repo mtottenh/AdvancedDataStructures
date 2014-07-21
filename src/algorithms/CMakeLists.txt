@@ -1,2 +1,3 @@
 include_directories(peak_finding/)
-add_library(Algorithms peak_finding/peak.cpp)
+include_directories(sorting/)
+add_library(Algorithms peak_finding/peak.cpp sorting/sorting.cpp)

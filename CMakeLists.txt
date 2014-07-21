@@ -3,7 +3,7 @@ project (Exercises)
 
 #Compiler Flags
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=c++11 -g")
-SET(CMAKE_CXX_COMPILER "g++")
+SET(CMAKE_CXX_COMPILER "clang++")
 
 
 #Basic Data Strucutres
