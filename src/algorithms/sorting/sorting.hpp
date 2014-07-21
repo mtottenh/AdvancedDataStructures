@@ -16,4 +16,6 @@ extern template void insertion_sort<int>(std::vector<int> &vec);
 template <typename T>
 void merge_sort(std::vector<T> &vec);
 
+extern template void merge_sort<int>(std::vector<int> &vec);
+
 #endif

@@ -32,8 +32,8 @@ int main() {
     if (i < a.size() - 1)
       std::cout << ", ";
   }
-  std::cout << "}\nAfter insertion sort a[]: {";
-  insertion_sort<int>(a);
+  std::cout << "}\nAfter merge sort a[]: {";
+  merge_sort<int>(a);
   for (size_t i = 0; i < a.size(); i++) {
     std::cout << a[i];
     if (i < a.size() - 1)
