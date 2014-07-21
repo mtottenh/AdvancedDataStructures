@@ -2,11 +2,11 @@
 *.swp
 
 #ignore build directory junk from CMake
- build/AlgorithmExercises
- build/CMakeCache.txt
- build/CMakeFiles/
- build/DataStructureExercises
- build/Makefile
- build/cmake_install.cmake
- build/src/
+build/AlgorithmExercises
+build/CMakeCache.txt
+build/CMakeFiles/
+build/DataStructureExercises
+build/Makefile
+build/cmake_install.cmake
+build/src/
 
