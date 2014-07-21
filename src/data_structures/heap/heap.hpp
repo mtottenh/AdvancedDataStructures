@@ -2,7 +2,7 @@
 #define __HEAP__H__
 #include <vector>
 #include <cstdlib>
-
+#include <utility>
 /* Heap implmented over a vector
  * TODO: template this class to make it more generic
  */
@@ -14,9 +14,9 @@ class Heap {
     bool is_maxheap;
 
     void heapify(size_t node);
-    size_t parent(size_t node);
-    size_t left_child(size_t node);
-    size_t right_child(size_t node);
+    std::pair<size_t,bool> parent(size_t node);
+    std::pair<size_t,bool> left_child(size_t node);
+    std::pair<size_t,bool> right_child(size_t node);
 
   public:
 
@@ -26,7 +26,7 @@ class Heap {
       for(auto a : input) { data.push_back(a); }
     };
     ~Heap() {};
-
+    void print();
 
     void build_heap();
     void insert(int elem);
