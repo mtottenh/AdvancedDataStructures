@@ -7,9 +7,9 @@ From what I can gather, **6.006** and **6.046** are *similar*.
 1. [**Peak Finding Problem**](./lect1.md)
   * [Models of computation](./lect1_5.md)
 2. [**Sorting**](./lect2.md)
-  * Insertion sort, Merge Sort
-  * Heaps and Heap sort
-  * BSTs and BST sort
+  * [Insertion sort, Merge Sort](./lect2.md#basic-algorithms)
+  * [Heaps and Heap sort](./lect2.md#heaps--heap-sort)
+  * [BSTs and BST sort](./lect2.md#bst)
   * AVL Trees and AVL sort
   * Counting/Radix sort & Lower bounds for sorting
 3. **Hashing**
