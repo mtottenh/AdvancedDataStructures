@@ -2,6 +2,12 @@
 ================================================================
 
 A model of computation specifies what can be done in O(1) time.
+Comparison Model
+----------------
+Useful for prooving lower bounds of sorting, only count comparison opperations
+ * Comparison operations ( <,>,<=,>=,) take O(1) time
+
+
 
 Random Access Machine (RAM) Model
 ---------------------------------
