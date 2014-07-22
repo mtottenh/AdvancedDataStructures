@@ -1,4 +1,4 @@
-#include <sorting.hpp>
+#include <insertion_sort.hpp>
 
 template <typename T>
 void swap(std::vector<T> &vec, size_t idx_a, size_t idx_b) {
