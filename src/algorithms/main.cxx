@@ -1,7 +1,7 @@
 #include <iostream>
 #include <tuple>
 #include <peak_finding/peak.hpp>
-#include <sorting/sorting.hpp>
+#include <sorting/merge_sort.hpp>
 
 int main() {
   /* 1D Peak Finding */

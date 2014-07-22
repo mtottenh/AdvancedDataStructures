@@ -1,5 +1,5 @@
-#ifndef _SORTING_H_
-#define _SORTING_H_
+#ifndef _ISORT_H_
+#define _ISORT_H_
 #include <vector>
 #include <cstdlib>
 #include <iostream>
@@ -12,10 +12,5 @@ void insertion_sort(std::vector<T> &vec);
 /* Define specialization of template function*/
 extern template void insertion_sort<int>(std::vector<int> &vec);
 
-
-template <typename T>
-void merge_sort(std::vector<T> &vec);
-
-extern template void merge_sort<int>(std::vector<int> &vec);
 
 #endif
