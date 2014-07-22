@@ -1,5 +1,5 @@
-[<](lect1_5.md)Sorting [>](./lect3.md)
-======================================
+[<](lect1_5.md) Sorting [>](./lect3.md)
+=======================================
 Basic Algorithms:
 -----------------
   * Insertion Sort
