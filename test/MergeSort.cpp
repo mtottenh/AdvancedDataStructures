@@ -1,6 +1,6 @@
 #include <iostream>
 #include <TestLib.hpp>
-#include <heap/heap.hpp>
+#include <sorting/merge_sort.hpp>
 
 int main() {
   std::vector<int> a;
@@ -13,11 +13,11 @@ int main() {
   a.push_back(7);
   a.push_back(5);
 
-  std::cout << "BST sort\n";
+  std::cout << "Merge sort\n";
   std::cout << "Before sort a[]: {";
   print_array(a);
   /* Sort */
-  heap_sort(a);
+  merge_sort(a);
   /* Print Array */
   std::cout << "After sort a[]: {";
   print_array(a);

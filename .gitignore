@@ -9,4 +9,11 @@ build/DataStructureExercises
 build/Makefile
 build/cmake_install.cmake
 build/src/
-
+build/AVLSort
+build/BSTSort
+build/CTestTestfile.cmake
+build/HeapSort
+build/InsertionSort
+build/MergeSort
+build/Testing/
+build/test/

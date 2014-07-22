@@ -13,7 +13,7 @@ int main() {
   a.push_back(7);
   a.push_back(5);
 
-  std::cout << "BST sort\n";
+  std::cout << "Heap sort\n";
   std::cout << "Before sort a[]: {";
   print_array(a);
   /* Sort */

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <TestLib.hpp>
-#include <heap/heap.hpp>
+#include <binary_tree/BinaryTree.hpp>
 
 int main() {
   std::vector<int> a;
@@ -17,7 +17,7 @@ int main() {
   std::cout << "Before sort a[]: {";
   print_array(a);
   /* Sort */
-  heap_sort(a);
+//  bst_sort(a);
   /* Print Array */
   std::cout << "After sort a[]: {";
   print_array(a);
