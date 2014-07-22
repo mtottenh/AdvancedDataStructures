@@ -2,9 +2,9 @@
 =======================================
 Basic Algorithms:
 -----------------
-  * Insertion Sort
+  * [Insertion Sort](../../src/algorithms/sorting/insertion_sort.cpp)
     * Maintain invariant that LHS of array is sorted, insert next element into array using pairwise swaps.
-  * Merge Sort 
+  * [Merge Sort](../../src/algorithms/sorting/merge_sort.cpp)
     * Divide and conquore.
     * Work happens in the merge operation.
 
