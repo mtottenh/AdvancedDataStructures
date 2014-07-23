@@ -12,7 +12,8 @@ int main() {
   a.push_back(1);
   a.push_back(7);
   a.push_back(5);
-
+  std::vector<int> b = a;
+  bool passed_test = false;
   std::cout << "Merge sort\n";
   std::cout << "Before sort a[]: {";
   print_array(a);
@@ -21,8 +22,8 @@ int main() {
   /* Print Array */
   std::cout << "After sort a[]: {";
   print_array(a);
-
-  return 0;
+  passed_test = check_vs_stl(a,b);
+  return passed_test ? 0 : 1;
 }
 
 

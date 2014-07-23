@@ -43,10 +43,10 @@ void Heap::heapify(size_t node) {
   auto r = right_child(node);
   size_t child = node;
 
-  if (l.second && data[node] <= data[l.first]) {
+  if (l.second && data[node] >= data[l.first]) {
     child = l.first;
   }
-  if (r.second && data[child] <= data[r.first]) {
+  if (r.second && data[child] >= data[r.first]) {
     child = r.first;
   }
 

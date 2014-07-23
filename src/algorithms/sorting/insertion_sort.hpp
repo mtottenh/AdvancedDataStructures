@@ -9,8 +9,7 @@
 template <typename T>
 void insertion_sort(std::vector<T> &vec);
 
-/* Define specialization of template function*/
-extern template void insertion_sort<int>(std::vector<int> &vec);
+#include <sorting/insertion_sort.hxx>
 
 
 #endif

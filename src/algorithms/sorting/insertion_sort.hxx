@@ -1,5 +1,3 @@
-#include <insertion_sort.hpp>
-
 template <typename T>
 void swap(std::vector<T> &vec, size_t idx_a, size_t idx_b) {
   T elem = vec[idx_a];
@@ -18,7 +16,5 @@ void insertion_sort(std::vector<T> &vec) {
     }
   }
 }
-/* manually instantiate int version */
-template void insertion_sort<int>(std::vector<int> &vec);
 
 

@@ -6,7 +6,5 @@
 
 template <typename T>
 void merge_sort(std::vector<T> &vec);
-
-extern template void merge_sort<int>(std::vector<int> &vec);
-
+#include <sorting/merge_sort.hxx>
 #endif

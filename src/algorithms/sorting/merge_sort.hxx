@@ -1,4 +1,3 @@
-#include <merge_sort.hpp>
 /* vec: Destination array to merge into
  * vec_a & vec_b: arrays to merge
  */
@@ -47,4 +46,3 @@ void merge_sort(std::vector<T> &vec) {
   }
 }
 
-template void merge_sort<int>(std::vector<int> &vec);
