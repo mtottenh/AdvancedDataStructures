@@ -2,15 +2,16 @@
 =======================================
 Basic Algorithms:
 -----------------
-  * [Insertion Sort](../../src/algorithms/sorting/insertion_sort.cpp)
+  * [Insertion Sort](../../src/algorithms/sorting/insertion_sort.hxx)
     * Maintain invariant that LHS of array is sorted, insert next element into array using pairwise swaps.
-  * [Merge Sort](../../src/algorithms/sorting/merge_sort.cpp)
+  * [Merge Sort](../../src/algorithms/sorting/merge_sort.hxx)
     * Divide and conquore.
     * Work happens in the merge operation.
 
 Heaps & Heap Sort
 -----------------
-Can be used as a way of representing an array. Consider the Tree:
+ * [Heap](../../src/data_structures/heap/heap.hpp) : Can be used as a way of representing an array. Consider the Tree:
+ 
 
 ```
     A
@@ -27,7 +28,7 @@ Sorting using a heap is equivilent to building a heap over the array and calling
 
 BST
 ---
-A BST has the following properties:
+A [BST](../../src/data_structures/binary_tree/BinaryTree.hpp) has the following properties:
   * Consits of nodes & pointers (Pointer Machine Model)
   * At most 2 children
   * Inserts take O(1) time once the correct place is found (similar to linked lists).
