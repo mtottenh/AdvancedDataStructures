@@ -3,8 +3,7 @@
 #include <vector>
 #include <iostream>
 template <class T> class BinaryTreeIter;
-template <typename T> void bst_sort(std::vector<T> &vec);
-
+template <class T> class InOrderBinaryTreeIter;
 /* A basic generic node */
 template <typename T>
 class BinaryTreeNode {
@@ -41,12 +40,16 @@ class BinaryTreeNode {
 template <typename T>
 class IBST {
   public:
-    typedef BinaryTreeIter<T> iterator;
+    typedef InOrderBinaryTreeIter<T> iterator;
+    typedef PreOrderBinaryTreeIter<T> pre_order_iterator;
+    typedef PostOrderBinaryTreeIter<T> post_order_iterator;
+
     typedef ptrdiff_t difference_type;
     typedef size_t size_type;
     typedef T value_type;
     typedef T * pointer;
     typedef T & reference;
+
 
     virtual void remove (T elem) = 0;
     virtual void insert (T elem) = 0;
@@ -60,7 +63,7 @@ class IBST {
 template <typename T>
 class BinaryTree : public IBST<T> {
 
-  friend class BinaryTreeIter<T>;
+  friend class InOrderBinaryTreeIter<T>;
   typedef typename IBST<T>::iterator iterator;
 
   private:
@@ -86,47 +89,168 @@ class BinaryTree : public IBST<T> {
 };
 
 /* in-order traversal iterator */
+#include <iterator>
 template <typename T>
-class BinaryTreeIter {
+class InOrderBinaryTreeIter : public std::iterator<std::forward_iterator_tag, T> {
   private:
   BinaryTree<T> &tree;
   std::vector<BinaryTreeNode<T>*> stack;
+  /* Current node to be looked at */
+  BinaryTreeNode<T> *current_elem;
   BinaryTreeNode<T> *elem;
-  BinaryTreeNode<T> *velem;
 
   public:
-    BinaryTreeIter(BinaryTree<T> &btree) : tree(btree) {
+    InOrderBinaryTreeIter(BinaryTree<T> &btree) : tree(btree) {
       elem = tree.root;
+      /* Go to leftmost node */
       while (elem != nullptr) {
         stack.push_back(elem);
         elem = elem->get_left();
       }
-      velem = stack.back();
+      /*now elem == nullptr and stack.back() = leftmost node */
+      current_elem = stack.back();
+      elem = current_elem->get_right();
       stack.pop_back();
     };
 
     T & operator*() {
-      return velem->get_item();
+      return current_elem->get_item();
     }
-
-    typename IBST<T>::iterator & operator++() {
-      /* next node in travesal*/
-      while (!stack.empty() || elem != nullptr) {
-        if (elem != nullptr) {
-          stack.push_back(elem);
-          elem = elem->get_left();
-        } else {
-          velem = stack.back();
-          stack.pop_back();
-          elem = velem;
-          elem = elem->get_right();
-          break;
-        }
+    typename BinaryTree<T>::iterator & operator++() {
+      /* PRE: elem is the root of a subtree*/
+      while (elem != nullptr) {
+        stack.push_back(elem);
+        elem = elem->get_left();
+      }
+      /* POST:
+       * elem == nullptr
+       * stack.back() = left most node of subtree  from PRE*/
+      if (!stack.empty() && elem == nullptr) {
+        current_elem = stack.back();
+        stack.pop_back();
+        elem = current_elem->get_right();
       }
       return *this;
     }
-    /* TODO :- Implement equality and prefix ++ */
+    /* Probably doesn't work very well... lets find out
+    typename BinaryTree<T>::iterator & operator--() {
+      stack.push_back(current_elem);
+      current_elem = current_elem->get_left();
+      elem = nullptr;
+      return *this;
+    }*/
+   bool operator==(const InOrderBinaryTreeIter<T>& rhs) {
+           bool condition = true;
+           condition &= current_elem == rhs.current_elem;
+           condition &= elem == rhs.elem;
+           return condition;
+   }
+   bool operator!=(const InOrderBinaryTreeIter<T>& rhs) {return !(*this == rhs);}
+   T *operator->() const { return current_elem;};
+
 };
+
+/* Pre-Order Tree Traversal */
+template <typename T>
+class PreOrderBinaryTreeIter : public std::iterator<std::forward_iterator_tag, T> {
+  private:
+    BinaryTree<T> &tree;
+    std::vector<BinaryTreeNode<T>*> stack;
+    /* Current node to be looked at */
+    BinaryTreeNode<T> *elem;
+
+  public:
+    PreOrderBinaryTreeIter(BinaryTree<T> &btree) : tree(btree) {
+      elem = tree.root;
+    };
+
+    T & operator*() {
+      return elem->get_item();
+    }
+    typename BinaryTree<T>::iterator & operator++() {
+      stack.push_back(elem)
+      elem = elem->get_left();
+
+      if (!stack.empty() && elem == nullptr) {
+        elem = stack.back();
+        stack.pop_back();
+        elem = elem->get_right();
+      }
+      return *this;
+    }
+    bool operator==(const PreOrderBinaryTreeIter<T>& rhs) {
+           bool condition = true;
+           condition &= elem == rhs.elem;
+           return condition;
+    }
+    bool operator!=(const PreOrderBinaryTreeIter<T>& rhs) {return !(*this == rhs);}
+    T *operator->() const { return elem;};
+};
+
+
+
+
+/* Post Order Tree Traversal */
+template <typename T>
+class PostOrderBinaryTreeIter : public std::iterator<std::forward_iterator_tag, T> {
+  private:
+  BinaryTree<T> &tree;
+  std::vector<BinaryTreeNode<T>*> stack;
+  /* Current node to be looked at */
+  BinaryTreeNode<T> *current_elem;
+  BinaryTreeNode<T> *elem;
+
+  public:
+    InOrderBinaryTreeIter(BinaryTree<T> &btree) : tree(btree) {
+      elem = tree.root;
+      /* Go to leftmost node */
+      while (elem != nullptr) {
+        stack.push_back(elem);
+        elem = elem->get_left();
+      }
+      /*now elem == nullptr and stack.back() = leftmost node */
+      current_elem = stack.back();
+      elem = current_elem->get_right();
+      stack.pop_back();
+    };
+
+    T & operator*() {
+      return current_elem->get_item();
+    }
+    typename BinaryTree<T>::iterator & operator++() {
+      /* PRE: elem is the root of a subtree*/
+      while (elem != nullptr) {
+        stack.push_back(elem);
+        elem = elem->get_left();
+      }
+      /* POST:
+       * elem == nullptr
+       * stack.back() = left most node of subtree  from PRE*/
+      if (!stack.empty() && elem == nullptr) {
+        current_elem = stack.back();
+        stack.pop_back();
+        elem = current_elem->get_right();
+      }
+      return *this;
+    }
+    /* Probably doesn't work very well... lets find out
+    typename BinaryTree<T>::iterator & operator--() {
+      stack.push_back(current_elem);
+      current_elem = current_elem->get_left();
+      elem = nullptr;
+      return *this;
+    }*/
+   bool operator==(const InOrderBinaryTreeIter<T>& rhs) {
+           bool condition = true;
+           condition &= current_elem == rhs.current_elem;
+           condition &= elem == rhs.elem;
+           return condition;
+   }
+   bool operator!=(const InOrderBinaryTreeIter<T>& rhs) {return !(*this == rhs);}
+   T *operator->() const { return current_elem;};
+
+};
+
 
 
 

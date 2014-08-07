@@ -5,14 +5,7 @@
 int main() {
   bool passed_test = false;
   std::vector<int> a;
-  a.push_back(1);
-  a.push_back(3);
-  a.push_back(2);
-  a.push_back(9);
-  a.push_back(4);
-  a.push_back(1);
-  a.push_back(7);
-  a.push_back(5);
+  populate_array(a,test_size);
   std::vector<int> b = a;
 
   std::cout << "AVL sort\n";

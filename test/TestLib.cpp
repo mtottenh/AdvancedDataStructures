@@ -35,3 +35,14 @@ bool check_vs_stl(std::vector<T> &vec_a, std::vector<T> &vec_b) {
 
 template bool check_vs_stl<int>(std::vector<int> &vec_a, std::vector<int> &vec_b);
 
+
+
+template <typename T>
+void populate_array(std::vector<T> &vec, size_t num) {
+  std::uniform_int_distribution<uint32_t> dist(0,test_size);
+  std::default_random_engine rng;
+  for(size_t i = 0; i < num; i++) {
+    vec.push_back(dist(rng));
+  }
+}
+template void populate_array<int>(std::vector<int> &vec, size_t num);
