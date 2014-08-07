@@ -4,6 +4,8 @@
 #include <iostream>
 template <class T> class BinaryTreeIter;
 template <class T> class InOrderBinaryTreeIter;
+template <class T> class PreOrderBinaryTreeIter;
+template <class T> class PostOrderBinaryTreeIter;
 /* A basic generic node */
 template <typename T>
 class BinaryTreeNode {
@@ -168,7 +170,7 @@ class PreOrderBinaryTreeIter : public std::iterator<std::forward_iterator_tag, T
       return elem->get_item();
     }
     typename BinaryTree<T>::iterator & operator++() {
-      stack.push_back(elem)
+      stack.push_back(elem);
       elem = elem->get_left();
 
       if (!stack.empty() && elem == nullptr) {
@@ -201,7 +203,7 @@ class PostOrderBinaryTreeIter : public std::iterator<std::forward_iterator_tag, 
   BinaryTreeNode<T> *elem;
 
   public:
-    InOrderBinaryTreeIter(BinaryTree<T> &btree) : tree(btree) {
+    PostOrderBinaryTreeIter(BinaryTree<T> &btree) : tree(btree) {
       elem = tree.root;
       /* Go to leftmost node */
       while (elem != nullptr) {
@@ -240,20 +242,16 @@ class PostOrderBinaryTreeIter : public std::iterator<std::forward_iterator_tag, 
       elem = nullptr;
       return *this;
     }*/
-   bool operator==(const InOrderBinaryTreeIter<T>& rhs) {
+   bool operator==(const PostOrderBinaryTreeIter<T>& rhs) {
            bool condition = true;
            condition &= current_elem == rhs.current_elem;
            condition &= elem == rhs.elem;
            return condition;
    }
-   bool operator!=(const InOrderBinaryTreeIter<T>& rhs) {return !(*this == rhs);}
+   bool operator!=(const PostOrderBinaryTreeIter<T>& rhs) {return !(*this == rhs);}
    T *operator->() const { return current_elem;};
 
 };
-
-
-
-
 
 #include <binary_tree/BinaryTree.hxx>
 
