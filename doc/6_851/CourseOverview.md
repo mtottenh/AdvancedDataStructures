@@ -1,6 +1,6 @@
 Advanced Data Structures
 ========================
-1. Temporal Data Structures
+1. [Temporal Data Structures](./lect1.md)
   * Persistant
   * Retroactive 
 2. Geometric Data Structures
